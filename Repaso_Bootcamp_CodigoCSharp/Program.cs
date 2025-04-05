@@ -51,8 +51,9 @@
             //Comprobar si un número es impar
             Console.WriteLine("");
             Console.WriteLine("========================================");
-            int numeroaComprobar;
             Console.WriteLine("Ingresa el valor a comprobar: ");
+            Console.WriteLine("========================================");
+            int numeroaComprobar;
             numeroaComprobar = Convert.ToInt32(Console.ReadLine());
 
             if (numeroaComprobar % 2 == 0)
@@ -66,7 +67,21 @@
             }
 
 
+            //Comprobar si un número es impar
+            Console.WriteLine("");
+            Console.WriteLine("========================================");
+            Console.WriteLine("Número mayor de 3 números: ");
+            Console.WriteLine("========================================");
+            int primerNumero, segundoNumero, tercerNumero, numeroMayor;
 
+            primerNumero = Convert.ToInt32(Console.ReadLine());
+            segundoNumero = Convert.ToInt32(Console.ReadLine());
+            tercerNumero = Convert.ToInt32(Console.ReadLine());
+            
+            if (primerNumero > segundoNumero)
+            {
+                numeroMayor = primerNumero;
+            }
 
 
         }
