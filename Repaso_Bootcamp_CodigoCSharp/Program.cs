@@ -140,9 +140,16 @@
                     Console.WriteLine("El área del rectángulo es: " + (ld_base*ld_altura));
 
                     break;
-                default: Console.WriteLine("La opción ingresado no existe!!");
+                default: Console.WriteLine("La opción ingresada no existe!!");
                     break ;
             }
+
+
+
+
+
+
+
 
 
 
