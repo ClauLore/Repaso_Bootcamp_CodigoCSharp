@@ -28,6 +28,20 @@
 
                 contador1++;
             }
+
+
+            int inicio = 1;
+            while(inicio <= 5)
+            {
+                int b = 1;
+                while(b<=5)
+                {
+                    Console.Write(b+ " ");
+                    b++;
+                }
+                Console.WriteLine();
+                inicio++;
+            }
         }
     }
 
