@@ -73,15 +73,77 @@
             Console.WriteLine("Número mayor de 3 números: ");
             Console.WriteLine("========================================");
             int primerNumero, segundoNumero, tercerNumero, numeroMayor;
+            Console.WriteLine("Ingrese el primer número: ");
 
             primerNumero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingrese el segundo número: ");
+
             segundoNumero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingrese el tercer número: ");
+
             tercerNumero = Convert.ToInt32(Console.ReadLine());
             
             if (primerNumero > segundoNumero)
             {
                 numeroMayor = primerNumero;
+                if (numeroMayor > tercerNumero)
+                {
+                    Console.WriteLine("El número mayor es el primer número: " + numeroMayor);
+                }
+                else
+                {
+                    Console.WriteLine("El número mayor es el tercer número: " + tercerNumero);
+                }
             }
+            else
+            {
+                numeroMayor = segundoNumero;
+                if (numeroMayor > tercerNumero)
+                {
+                    Console.WriteLine("El número mayor es el segundo número: " + numeroMayor);
+                }
+                else
+                {
+                    Console.WriteLine("El número mayor es el tercer número: " + tercerNumero);
+                }
+            }
+
+
+
+            //Comprobar si has escogido círculo o rectángulo
+            int li_opcion;
+
+            Console.WriteLine("");
+            Console.WriteLine("=====================CALCULAR ÁREAS===========================");
+            Console.WriteLine("1. ÁREA DEL CÍRCULO");
+            Console.WriteLine("2. ÁREA DEL RECTÁNGULO");
+            Console.WriteLine("========================================");
+            Console.WriteLine("Ingresa la opción para comprobar: ");
+            li_opcion = Convert.ToInt32(Console.ReadLine());
+
+            switch(li_opcion)
+            {
+                case 1:
+                    decimal ld_radio;
+                    Console.WriteLine("Ingrese el radio del círculo: ");
+                    ld_radio = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("El área del círculo es: " + (Convert.ToDecimal(Math.PI)* Convert.ToDecimal(Math.Pow(Convert.ToDouble(ld_radio),2 ))));
+
+                    break;
+                case 2:
+                    decimal ld_base, ld_altura;
+
+                    Console.WriteLine("Ingrese la base del rectángulo: ");
+                    ld_base = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("Ingrese la altura del rectángulo: ");
+                    ld_altura = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("El área del rectángulo es: " + (ld_base*ld_altura));
+
+                    break;
+                default: Console.WriteLine("La opción ingresado no existe!!");
+                    break ;
+            }
+
 
 
         }
