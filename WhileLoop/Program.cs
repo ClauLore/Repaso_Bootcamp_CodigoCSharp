@@ -31,17 +31,39 @@
 
 
             int inicio = 1;
-            while(inicio <= 5)
+            while (inicio <= 5)
             {
                 int b = 1;
-                while(b<=5)
+                while (b <= 5)
                 {
-                    Console.Write(b+ " ");
+                    Console.Write(b + " ");
                     b++;
                 }
                 Console.WriteLine();
                 inicio++;
             }
+
+            ///////////////////////////
+            ///Reto patrón
+            ///
+            int inicio2 = 1;
+            while (inicio2 <= 5)
+            {
+                int b = 1;
+                while (b <= 5)
+                {
+                    Console.Write(b + " ");
+                    if (inicio2 == b)
+                    {
+                        break;
+                    }
+                    b++;
+                }
+                Console.WriteLine();
+                inicio2++;
+            }
+
+
         }
     }
 
