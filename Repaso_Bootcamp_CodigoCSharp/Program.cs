@@ -21,7 +21,8 @@
             {
                 Console.WriteLine("Sí, es mi número de DNI");
             }
-            else {
+            else
+            {
                 Console.WriteLine("No es mi DNI");
             }
 
@@ -34,7 +35,7 @@
             string diaSemana = "Lunes";
 
 
-            switch (diaSemana) 
+            switch (diaSemana)
             {
                 case "Lunes":
                     Console.WriteLine("El día es lunes");
@@ -61,7 +62,7 @@
                 Console.WriteLine("El número es par");
 
             }
-            else 
+            else
             {
                 Console.WriteLine("El número es impar");
             }
@@ -82,7 +83,7 @@
             Console.WriteLine("Ingrese el tercer número: ");
 
             tercerNumero = Convert.ToInt32(Console.ReadLine());
-            
+
             if (primerNumero > segundoNumero)
             {
                 numeroMayor = primerNumero;
@@ -121,13 +122,13 @@
             Console.WriteLine("Ingresa la opción para comprobar: ");
             li_opcion = Convert.ToInt32(Console.ReadLine());
 
-            switch(li_opcion)
+            switch (li_opcion)
             {
                 case 1:
                     decimal ld_radio;
                     Console.WriteLine("Ingrese el radio del círculo: ");
                     ld_radio = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine("El área del círculo es: " + (Convert.ToDecimal(Math.PI)* Convert.ToDecimal(Math.Pow(Convert.ToDouble(ld_radio),2 ))));
+                    Console.WriteLine("El área del círculo es: " + (Convert.ToDecimal(Math.PI) * Convert.ToDecimal(Math.Pow(Convert.ToDouble(ld_radio), 2))));
 
                     break;
                 case 2:
@@ -137,11 +138,12 @@
                     ld_base = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine("Ingrese la altura del rectángulo: ");
                     ld_altura = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine("El área del rectángulo es: " + (ld_base*ld_altura));
+                    Console.WriteLine("El área del rectángulo es: " + (ld_base * ld_altura));
 
                     break;
-                default: Console.WriteLine("La opción ingresada no existe!!");
-                    break ;
+                default:
+                    Console.WriteLine("La opción ingresada no existe!!");
+                    break;
             }
 
 

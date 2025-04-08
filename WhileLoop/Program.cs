@@ -15,7 +15,7 @@
             Console.WriteLine("Se acabó el bucle");
 
             //Tabla de multiplicar
-            int valorTabla, contador1=0;
+            int valorTabla, contador1 = 0;
             Console.WriteLine("Ingrese el valor de la tabla de multiplicar");
             valorTabla = Convert.ToInt32(Console.ReadLine());
 
@@ -72,7 +72,7 @@
                 int b = 5;
                 while (b >= 1)
                 {
-                   
+
                     if (inicio3 == b)
                     {
                         int c = 1;
@@ -89,7 +89,7 @@
                     {
                         Console.Write("* ");
                     }
-                        b--;
+                    b--;
                 }
                 Console.WriteLine();
                 inicio3++;
@@ -138,7 +138,7 @@
             ///
             for (int j = 1; j <= 5; j++)
             {
-                for (int k = 1; k <= 5;k++)
+                for (int k = 1; k <= 5; k++)
                 {
                     Console.Write(k + " ");
                     if (j == k)

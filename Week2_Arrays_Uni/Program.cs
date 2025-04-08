@@ -1,6 +1,4 @@
-﻿using System.Net.Http.Headers;
-
-namespace Week2_Arrays_Uni
+﻿namespace Week2_Arrays_Uni
 {
     internal class Program
     {
@@ -163,7 +161,8 @@ namespace Week2_Arrays_Uni
                 case 5:
                     MostrarDistribucionRangos(calificaciones);
                     break;
-                    default:Console.WriteLine("Opción incorrecta!!");
+                default:
+                    Console.WriteLine("Opción incorrecta!!");
                     break;
             }
 
@@ -189,10 +188,10 @@ namespace Week2_Arrays_Uni
             //* 80 - 89(Notable)
             //* 90 - 100(Excelente)
             Console.Write("\nCantidad de estudiantes por rangos de calificación: ");
-            int reprobados=0, suficiente=0, bien=0, notable = 0, excelente = 0; 
+            int reprobados = 0, suficiente = 0, bien = 0, notable = 0, excelente = 0;
             for (int i = 0; i < calificaciones.Length; i++)
             {
-               
+
                 if (calificaciones[i] >= 0 && calificaciones[i] <= 59)
                 {
                     reprobados++;
@@ -232,14 +231,14 @@ namespace Week2_Arrays_Uni
 
         private static void CalcularEstadisticas(double[] calificaciones)
         {
-            int cantAprobados=0;
+            int cantAprobados = 0;
             for (int i = 0; i < calificaciones.Length; i++)
             {
                 if (calificaciones[i] >= 60)
                     cantAprobados++;
 
             }
-            Console.WriteLine($"La cantidad de alumnos aprobados es: { cantAprobados}");
+            Console.WriteLine($"La cantidad de alumnos aprobados es: {cantAprobados}");
         }
 
         private static void MostrarCalificaciones(double[] calificaciones)
@@ -248,11 +247,11 @@ namespace Week2_Arrays_Uni
             for (int i = 0; i < calificaciones.Length; i++)
             {
                 Console.WriteLine($"Calificación alumno {i + 1} :{calificaciones[i]}");
-                
+
             }
         }
 
-        private static void CalificacionMaxMin (double[] calificaciones)
+        private static void CalificacionMaxMin(double[] calificaciones)
         {
             Array.Sort(calificaciones);
             Console.WriteLine("Calificación mínima " + calificaciones[0]);
@@ -263,11 +262,11 @@ namespace Week2_Arrays_Uni
         private static void PromedioCalificaciones(double[] calificaciones)
         {
 
-            double sumaNota=0;
+            double sumaNota = 0;
             foreach (int calificacion in calificaciones)
                 sumaNota += calificacion;
 
-            Console.Write("\nEl promedio de las calificaciones es: " + sumaNota/10);
+            Console.Write("\nEl promedio de las calificaciones es: " + sumaNota / 10);
         }
 
         private static void IngresarCalificaciones(double[] calificaciones)
@@ -275,11 +274,11 @@ namespace Week2_Arrays_Uni
             Console.WriteLine($"Ingrese calificaciones (0-100):");
             for (int i = 0; i < calificaciones.Length; i++)
             {
-                Console.WriteLine($"Ingrese la calificación del alumno { i + 1} :");
-                calificaciones[i] =Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"Ingrese la calificación del alumno {i + 1} :");
+                calificaciones[i] = Convert.ToInt32(Console.ReadLine());
 
             }
         }
-    
+
     }
 }
