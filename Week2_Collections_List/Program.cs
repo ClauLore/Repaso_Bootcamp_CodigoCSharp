@@ -119,6 +119,8 @@
             new Persona { Nombre = "Miguel", Edad = 19, Dni  = "7163235" }
         };
 
+
+
             // Find - Encontrar la primera persona menor de 18 años
             Persona menor = personas.Find(p => p.Edad < 18);
             Console.WriteLine($"Primera persona menor de edad: {menor.Nombre}, {menor.Edad} años");
@@ -132,7 +134,51 @@
             // FindIndex - Encontrar el índice de la primera persona que empieza con 'M'
             int indiceMLetra = personas.FindIndex(p => p.Nombre.StartsWith("M"));
             Console.WriteLine($"Índice de la primera persona con nombre que empieza por 'M': {indiceMLetra}");
+
+
+
+
+
+            // Crear una lista de personas para demostrar
+            List<Libro> libros = new List<Libro>
+        {
+            new Libro { Nombre = "El principito", Precio=15.00, Stock=15},
+            new Libro { Nombre = "A", Precio=15.00, Stock=15},
+            new Libro { Nombre = "B", Precio=25.00, Stock=45},
+            new Libro { Nombre = "C", Precio=5.00, Stock=98},
+            new Libro { Nombre = "D", Precio=45.00, Stock=6},
+            new Libro { Nombre = "E", Precio=55.00, Stock=1},
+            new Libro { Nombre = "F", Precio=65.00, Stock=5},
+            new Libro { Nombre = "G", Precio=75.00, Stock=95},
+            new Libro { Nombre = "H", Precio=95.00, Stock=55},
+            new Libro { Nombre = "I", Precio=105.00, Stock=35},
+        };
+
+
+            //Filtrar los libros con stock de mas de 10 unidades
+            List<Libro> stockMayor10 = libros.FindAll(p => p.Stock > 10);
+            Console.WriteLine("Libros con Stock mayor a 10 unidades:");
+            foreach (var libros2 in stockMayor10)
+                Console.WriteLine($"  {libros2.Nombre}, {libros2.Stock} unidades");
+
+            // Filtrar el stock por precio mas grande de 10.99 soles
+            List<Libro> precioMayor10 = libros.FindAll(p => p.Precio > 10.99);
+            Console.WriteLine("Libros con precio mayor a 10.99 son:");
+            foreach (var libros2 in precioMayor10)
+                Console.WriteLine($"  {libros2.Nombre}, {libros2.Precio} nuevos soles");
+
+            // Encontrar el indice del libro que empiece con "El"
+            int indiceEL = libros.FindIndex(p => p.Nombre.StartsWith("El"));
+            Console.WriteLine($"Índice del libro que empice con 'El' es: {indiceEL}");
+
+
         }
+
+
+
+
+
+
 
         // Clase auxiliar para demostraciones
         class Persona
@@ -142,6 +188,22 @@
             public string Dni { get; set; }
         }
 
-    
+        class Libro
+        {
+            public string Nombre { get; set; }
+            public double Precio
+            {
+                get; set;
+            }
+            public int Stock { get; set; }
+
+        }
+
+
+
+
+
+
+
     }
 }
