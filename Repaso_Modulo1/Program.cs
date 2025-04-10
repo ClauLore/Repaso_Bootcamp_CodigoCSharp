@@ -57,13 +57,9 @@
                             Console.Write("* ");
                         }
                         break;
-
                     }
-
-
                 }
                 Console.Write('\n');
-
             }
 
 
