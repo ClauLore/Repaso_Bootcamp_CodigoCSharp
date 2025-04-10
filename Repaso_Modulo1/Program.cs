@@ -44,6 +44,28 @@
 
             }
 
+            for (int m = 1; m <=5 ; m++)
+            {
+
+                for (int n = 5; 1 <= n; n--)
+                {
+                    Console.Write('-');
+                    if (m == n)
+                    {
+                        for(int o = 1; o <= m; o++)
+                        {
+                            Console.Write("* ");
+                        }
+                        break;
+
+                    }
+
+
+                }
+                Console.Write('\n');
+
+            }
+
 
             //for (int k = 5; k >= 1; k--)
             //{
